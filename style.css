@@ -83,6 +83,9 @@ header{
 
 
 /* ------ 2. GENERIC ITEMS - VISUALS------ */
+header{
+   min-width: 800px;
+}
 
 .banner {
     height: 200px;
@@ -110,7 +113,7 @@ header{
 
 .bloqueDesafio{
     line-height: 1.1;
-    min-width: 721px;
+    min-width: 800px;
 }
 
 .desafio{
