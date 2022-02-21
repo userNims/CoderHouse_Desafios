@@ -110,6 +110,7 @@ header{
 
 .bloqueDesafio{
     line-height: 1.1;
+    min-width: 721px;
 }
 
 .desafio{
