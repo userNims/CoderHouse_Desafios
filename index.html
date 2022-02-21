@@ -44,7 +44,7 @@
 
             // DECLARACION DE LAS VARIABLES
             let input = prompt('Ingrese una frase o palabra:');
-            const vowels = ['a', 'e', 'i', 'o', 'u'];
+            const vowels = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú'];
             let resultArray = [];
             let resultString = '';
             console.log(parseInt(input));
@@ -61,10 +61,10 @@
             // RECORREMOS LA PALABRA O FRASE Y EXTRAEMOS SOLO LAS VOCALES
             for(let iInput = 0; iInput < input.length; iInput++){
               // console.log('iInput is: ' + iInput);
-              if(inputLoweCase[iInput] == 'e'){
+              if(inputLoweCase[iInput] == 'e' || inputLoweCase[iInput] == 'é'){
                 resultArray.push(inputLoweCase[iInput]);
               }
-              if(inputLoweCase[iInput] == 'u'){
+              if(inputLoweCase[iInput] == 'u' || inputLoweCase[iInput] == 'ú'){
                 resultArray.push(inputLoweCase[iInput]);
               }
 
