@@ -65,6 +65,7 @@ table {
 
 header{
     display: flex;
+    min-width: 900px;
     align-items: center;
     justify-content: center;
 }
@@ -83,16 +84,15 @@ header{
 
 
 /* ------ 2. GENERIC ITEMS - VISUALS------ */
-header{
-   min-width: 800px;
-}
 
 .banner {
     height: 200px;
     width: 100%;
+    min-width: 750px;
     background-color: black;
     color: snow;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -101,6 +101,12 @@ header{
         font-family: monospace;
         font-size: 70px;
         font-style:italic;
+        margin-bottom: 20px;
+    }
+    .banner h2{
+        font-family: monospace;
+        font-size: 50px;
+        font-style:italic; 
     }
 
 .details{
@@ -114,6 +120,7 @@ header{
 .bloqueDesafio{
     line-height: 1.1;
     min-width: 800px;
+    margin-bottom: 50px;
 }
 
 .desafio{
@@ -138,7 +145,7 @@ header{
             font-size: 30px;
         }
         .description p, .details p{
-            padding: 0 50px;
+            padding: 0 80px;
             font-size: 17px;
         }
             .boldText{
@@ -164,7 +171,7 @@ header{
         }
 
 .details{
-    height: 350px;
+    height: 400px;
     font-family: monospace;
     display: flex;
     flex-direction: column;

@@ -11,6 +11,7 @@
     <header>
         <figure class="banner">
             <h1>DESAFIOS|CODERHOUSE</h1>
+            <h2>By Nims (BhL)</h2>
         </figure>
     </header>
     
@@ -22,65 +23,53 @@
             </div>
 
                 <div class="link">
-                    <p><button onclick="mainFunc_1()">EJECUTAR EL CÓDIGO</button></p>
+                    <p><button onclick="desafio_01()">EJECUTAR EL CÓDIGO</button></p>
                 </div>
         </section>
         
         <section class="details">
-            <h2>Solución - Hablar con las Ballenas </h2>
-            <p>Vamos a traducir palabras o frases humanas a su equivalente en <span class="boldText">lenguaje ballena</span>. Para ello se siguen algunas reglas: <br/><br/>
-            &emsp;&emsp;1.- El lenguaje de ballena, que se traduce, solo tendrá vocales.<br/>
-            &emsp;&emsp;2.- Las vocales como 'u' y 'e' se duplicarán.<br/><br/>
-            Luego, se mostrara mediante una alerta el texto traducido. <br/>La misma debera pronunciarse lentamente y en voz alta.<br/><br/>
+            <h2>Solución - Hablar con las ballenas </h2>
+            <p>Vamos a trasladar palabras o frases humanas a su equivalente en <span class="boldText">lenguaje ballena</span>. Para ello se siguen algunas reglas: <br/><br/>
+            &emsp;&emsp;1.- El lenguaje de ballena, que se traduce, solo tiene vocales.<br/>
+            &emsp;&emsp;2.- Las vocales como 'u' y 'e' serán duplicadas.<br/><br/>
+            Luego, se mostrara mediante una alerta el texto traducido. <br/>La misma debera pronunciarse en voz alta y de forma un poco lenta.<br/><br/>
             &emsp;&emsp;Ej: Tortuga <span class="boldText">(lenguaje humano)</span> -> OUUA <span class="boldText">(lenguaje de ballena)</span><br/><br/>
             Para el ejercicio se hizo uso de bucles <span class="boldText">FOR</span> anidados y de un bucle <span class="boldText">WHILE</span>.
             </p>
         </section>
-    </section>    
+    </section>
+
+    <section class="bloqueDesafio">
+        <section class="desafio">
+            <div class="description">
+                <h2>DESAFIO 2</h2>
+                <p> <span class="boldText">>> Consigna:</span> Armar la estructura HTML del proyecto incorporando lo ejercitado en las clases anteriores, algoritmo condicional y algoritmo con ciclo. Utilizar funciones para realizar esas operaciones.
+</p>
+            </div>
+
+                <div class="link">
+                    <p><button onclick="desafio_02()">EJECUTAR EL CÓDIGO</button></p>
+                </div>
+        </section>
+        
+        <section class="details">
+            <h2>Solución - Piedra, Papel o Tijera </h2>
+            <p>Recrearemos el clasico juego para dos personas, 'piedra papel tijera'. Para ello se pide al usuario que ingrese una opción valida y se la compara con una opción de la computadora. <br/><br/>Las posibles respuestas son:<br/>
+                &emsp;&emsp;-Piedra destruye tijeras.<br/>
+                &emsp;&emsp;-Tijeras cortan papel.<br/>
+                &emsp;&emsp;-Papel envuelve piedra.<br/>
+                &emsp;&emsp;-Tambien puede existir la opción de un empate.<br/><br/>
+            
+            Nuestro código se divide principalmente en <span class='boldText'>cuatro partes</span>:<br/>
+&emsp;&emsp;-Conseguir y validar la opción del usuario.<br/>
+&emsp;&emsp;-Conseguir de forma aleatoria la opción de la computadora.<br/>
+&emsp;&emsp;-Comparar las dos opciones y determinar quién es el ganador.<br/>
+&emsp;&emsp;-Mostrar los resultados de la partida.
+
+            </p>
+        </section>
+    </section>
+    
+    <script src="script.js"></script>
 </body>
-    <script>
-        function mainFunc_1(){
-            alert('TRADUCTOR: HUMANO -> BALLENA');
-
-            // DECLARACION DE LAS VARIABLES
-            let input = prompt('Ingrese una frase o palabra:');
-            const vowels = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú'];
-            let resultArray = [];
-            let resultString = '';
-            console.log(parseInt(input));
-
-
-            // VERIFICAMOS QUE SE INGRESE SOLO TEXTO
-            while(!isNaN(input)){
-              input = (prompt('Por favor, ingrese solo texto y no números')).toLowerCase();
-            }
-
-            let inputLoweCase = input.toLocaleLowerCase();
-
-
-            // RECORREMOS LA PALABRA O FRASE Y EXTRAEMOS SOLO LAS VOCALES
-            for(let iInput = 0; iInput < input.length; iInput++){
-              // console.log('iInput is: ' + iInput);
-              if(inputLoweCase[iInput] == 'e' || inputLoweCase[iInput] == 'é'){
-                resultArray.push(inputLoweCase[iInput]);
-              }
-              if(inputLoweCase[iInput] == 'u' || inputLoweCase[iInput] == 'ú'){
-                resultArray.push(inputLoweCase[iInput]);
-              }
-
-              for(let iVowels = 0; iVowels < vowels.length; iVowels++){
-                // console.log('iVowels is: ' + iVowels);
-                if(inputLoweCase[iInput] === vowels[iVowels]){
-                  // console.log(input[iInput]);
-                  resultArray.push(inputLoweCase[iInput]);
-                }
-              }
-            }
-
-
-            // OBTENEMOS E IMPRIMIMOS LOS RESULTADOS
-            resultString = (resultArray.join('')).toUpperCase();
-            alert(`MENSAJE TRADUCIDO:\n${input} -> ${resultString}`);
-    }
-    </script>
 </html>
