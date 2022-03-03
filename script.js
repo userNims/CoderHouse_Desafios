@@ -1,3 +1,4 @@
+// ---------------- DESAFIO 01 ----------------
 function desafio_01(){
     alert('Traductor de palabras o frases humanas al lenguaje de ballena');
 
@@ -41,6 +42,11 @@ function desafio_01(){
     resultString = (resultArray.join('')).toUpperCase();
     alert(`Mensaje traducido:\n${input} -> ${resultString}`);
 }
+// --------------------------------------------
+
+
+
+// ---------------- DESAFIO 02 ----------------
 function desafio_02(){
   alert('DESAFIO 02 \nJUGUEMOS A PIEDRA, PAPEL O TIJERA');
 
@@ -122,3 +128,56 @@ function desafio_02(){
 
   alert(playGame());
 }
+// --------------------------------------------
+
+
+
+// -------- DESAFIO 03 --------
+function desafio_03(){
+  //VARIABLES
+  const animalesPersona = ['Animal 1', 'Animal 2', 'Nombre de Persona'];
+  const verbosPalabra = ['Verbo 1', 'Verbo 2', 'Cualquier Palabra', 'Frase motivadora'];
+
+  // FUNCION PARA CAPITALIZAR LA PRIMERA LETRA
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  
+  // MENSAJES
+  alert('Completaremos una historia, para lo cual necesitaremos que ingreses texto según te pidamos');
+  
+  // PEDIMOS Y VERIFICAMOS LOS TEXTOS INGRESADOS
+  for (let index = 0; index < animalesPersona.length; index++) {
+    let tempData = prompt('Ingrese el texto que se pide: ' + animalesPersona[index]);
+    
+      if(!isNaN(tempData)){
+        while(!isNaN(tempData)){
+          tempData = prompt('Por favor, ingrese no ingrese números, solo texto el que se pide: ' + animalesPersona[index]);
+        }
+    }
+
+    animalesPersona[index] = tempData;
+  }
+
+  // PEDIMOS Y VERIFICAMOS LOS TEXTOS INGRESADOS
+  for (let index = 0; index < verbosPalabra.length; index++) {
+    let tempData = prompt('Ingrese el texto que se pide: ' + verbosPalabra[index]);
+    
+      if(!isNaN(tempData)){
+        while(!isNaN(tempData)){
+          tempData = prompt('Por favor, ingrese no ingrese números, solo texto el que se pide: ' + verbosPalabra[index]);
+        }
+    }
+
+    verbosPalabra[index] = tempData;
+  }
+
+  // MOSTRAMOS LOS ELEMENTOS QUE SE PUESIERON
+  let arrayComb = animalesPersona.concat(verbosPalabra);
+  alert('Se creo correctamente la historia con los siguientes textos:\n ' + arrayComb.join(', '));
+
+  // SE MODIFICA LA HISTORIA ACCEDIENDO A LOS ELEMENTOS DE LOS ARRAYS  
+  alert(`Un ${animalesPersona[0]} se estaba burlando del ${animalesPersona[1]} sin motivo alguno. "Eres más lento que patada de astronauta" dijo con una risa burlona. ${capitalizeFirstLetter(animalesPersona[2])}, quien era dueño del ${animalesPersona[1]} no hizo caso y siguio realizando lo que le apasionaba, ${verbosPalabra[0]}. \nPero el ${animalesPersona[0]} seguia molestandolo. "Tu mamá tiene tan mala punteria que tiro una piedra al suelo ... y fallo". Molesto ya, ${capitalizeFirstLetter(animalesPersona[2])} decidio persuadirle para que ya no molestara a su mascota. \n"Tengo mariposas en el estomago ... a no ... es hambre" dijo el ${animalesPersona[0]}. Te haré una carrera y te demostraré que soy mejor de lo que piensas, respondió el ${animalesPersona[1]}, asi que el ${animalesPersona[0]} acepto el reto por diversión. Entonces ${capitalizeFirstLetter(animalesPersona[2])} decidio actuar como juez, marcó la distancia y gritó, ${verbosPalabra[2]}¡¡¡, y enseguida los animales corrieron. \nEl ${animalesPersona[0]} pronto se perdió de vista, y para hacer sentir mal al ${animalesPersona[1]}, se salió del camino y se puso a practicar su hobbie,  ${verbosPalabra[1]}, y lo hizo durante muchas horas seguidas sin parar. Mientras tanto, el ${animalesPersona[1]} motivado por su diferencia siguió avanzando lenta pero constantemente. En cuestión unas horas llego al lugar donde estaba el ${animalesPersona[0]}, quien estaba totalmente perdido en ${verbosPalabra[1]}. \nEl ${animalesPersona[0]} estaba tan atrapado en ${verbosPalabra[1]}; que cuando por fin se dio cuenta, el ${animalesPersona[1]} estaba cerca de la meta. El ${animalesPersona[0]} ahora corrió más rápido, pero no pudo alcanzar al ${animalesPersona[1]} a tiempo. \n\nMoraleja: ${verbosPalabra[3]}`);
+
+}
+
