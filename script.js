@@ -204,3 +204,15 @@ function desafio_03(){
 
 // add event handlers when mouse events are triggered
 gritterForm.onsubmit = addGreet;
+
+
+
+// ---------------- DESAFIO FETCH ----------------
+function desafio_Fetch(){
+  fetch('./names.json').then(function(response) {
+    return response.json();
+  }).then(function(data){
+    console.log(data);
+    alert("Se imprimio el archivo JSON en la consola");
+  });
+}
